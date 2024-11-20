@@ -2,11 +2,13 @@ package cache
 
 import (
 	"fmt"
+	"google.golang.org/protobuf/proto"
 	"log"
 	"net/http"
 	"strings"
 	"sync"
 	"zcache/chash"
+	pb "zcache/zcachepb"
 )
 
 const (
@@ -61,8 +63,15 @@ func (h *HTTPPool) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Write the value to the response body as a proto message.
+	body, err := proto.Marshal(&pb.Response{Value: view.ByteSlice()})
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
 	w.Header().Set("Content-Type", "application/octet-stream")
-	w.Write(view.ByteSlice())
+	w.Write(body)
 }
 
 func (h *HTTPPool) Set(addrs ...string) {
