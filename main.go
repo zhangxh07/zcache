@@ -31,9 +31,20 @@ func main() {
 		8003: "http://localhost:8003",
 	}
 
+	grpcAddr := map[int]string{
+		11001: "http://localhost:11001",
+		11002: "http://localhost:11002",
+		11003: "http://localhost:11003",
+	}
+
 	var addrs []string
 	for _, v := range addrMap {
 		addrs = append(addrs, v)
+	}
+
+	var gaddrs []string
+	for _, v := range grpcAddr {
+		gaddrs = append(gaddrs, v)
 	}
 
 	zee := createGroup()
@@ -78,4 +89,8 @@ func startAPIServer(apiAddr string, gee *cache.Group) {
 	))
 	log.Println("fontend server is running at", apiAddr)
 	log.Fatal(http.ListenAndServe(apiAddr[7:], nil))
+}
+
+func startGrpcServer(addrs []string) {
+
 }

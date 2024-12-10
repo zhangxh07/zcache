@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48c054c0-2dc3-4493-9c9e-9d21348c146c" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/cache/cache.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cache/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/cache/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/cache/http.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/peers.go" beforeDir="false" afterPath="$PROJECT_DIR$/cache/peers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zcachepb/zcache.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/zcachepb/zcache.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,6 +1,7 @@
 package cache
 
 import (
+	"context"
 	"fmt"
 	"google.golang.org/protobuf/proto"
 	"io/ioutil"
@@ -11,6 +12,10 @@ import (
 
 type httpGetter struct {
 	bashURL string
+}
+
+type grpcGetter struct {
+	baseURL string
 }
 
 // 向其他节点获取缓存值
@@ -60,6 +65,11 @@ func (h *httpGetter) Get(in *pb.Request, out *pb.Response) error {
 	}
 
 	return nil
+}
+
+func (g *grpcGetter) Get(ctx context.Context, in *pb.Request) (*pb.Response, error) {
+
+	return nil, nil
 }
 
 var _ PeerGetter = (*httpGetter)(nil)
